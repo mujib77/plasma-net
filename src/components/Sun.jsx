@@ -47,7 +47,13 @@ export default function Sun({ position }) {
         <spriteMaterial map={innerGlowTex} transparent blending={THREE.AdditiveBlending} depthWrite={false} />
       </sprite>
       <Sphere ref={meshRef} args={[1, 64, 64]}>
-        <meshStandardMaterial map={texture} emissive="#ff6600" emissiveIntensity={2} emissiveMap={texture} />
+        <meshStandardMaterial
+         map={texture}
+        emissive="#ff8800" 
+        emissiveIntensity={0.4} 
+        roughness={1.0}
+        metalness={0.0} 
+        />
       </Sphere>
     </group>
   )
