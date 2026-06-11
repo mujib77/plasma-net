@@ -70,3 +70,42 @@ body {
   background: rgba(255,255,255,0.08);
   margin: 12px 0;
 }
+
+@media (max-width: 768px) {
+  .hud-iss {
+    display: none !important;
+  }
+
+  .hud-brand {
+    top: 12px !important;
+    left: 12px !important;
+  }
+
+  .hud-brand-title {
+    font-size: 14px !important;
+    letter-spacing: 3px !important;
+  }
+
+  .hud-solar {
+    top: 12px !important;
+    right: 12px !important;
+    min-width: 120px !important;
+    padding: 10px 12px !important;
+  }
+
+  .hud-solar .value {
+    font-size: 14px !important;
+  }
+
+  .hud-solar .label {
+    font-size: 7px !important;
+  }
+
+  .hud-asteroids {
+    bottom: 12px !important;
+  }
+
+  .hud-hint {
+    display: none !important;
+  }
+}
