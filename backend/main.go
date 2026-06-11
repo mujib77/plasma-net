@@ -118,6 +118,14 @@ func main() {
 		}
 	}()
 
+	go func() {
+		time.Sleep(1 * time.Minute)
+		ticker := time.NewTicker(14 * time.Minute)
+		for range ticker.C {
+			http.Get("https://plasma-net-backend.onrender.com/health")
+		}
+	}()
+
 	http.HandleFunc("/api/solar", corsMiddleware(solarHandler))
 	http.HandleFunc("/health", func(w http.ResponseWriter, r *http.Request) {
 		w.Write([]byte("ok"))
