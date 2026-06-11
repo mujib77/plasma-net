@@ -6,7 +6,7 @@ import * as THREE from 'three'
 
 export default function Earth({ position }) {
   const meshRef = useRef()
-  const texture = useTexture('/EarthColor.jpg')
+  const texture = useTexture('/plasma-net/EarthColor.jpg')
 
   useFrame((state) => {
     if (meshRef.current) meshRef.current.rotation.y += 0.001

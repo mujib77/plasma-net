@@ -21,7 +21,7 @@ export default function Sun({ position }) {
   const meshRef = useRef()
   const innerGlowRef = useRef()
   const outerGlowRef = useRef()
-  const texture = useTexture('/2k_sun.jpg')
+  const texture = useTexture('/plasma-net/2k_sun.jpg')
 
   const innerGlowTex = createGlowTexture('rgba(255,200,50,0.8)', 'rgba(255,100,0,0.3)')
   const outerGlowTex = createGlowTexture('rgba(255,80,0,0.4)', 'rgba(200,30,0,0.1)')
