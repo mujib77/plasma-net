@@ -6,7 +6,7 @@ export default function useSolarWind() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:8080/api/solar')
+        const res = await fetch('https://plasma-net-backend.onrender.com/api/solar')
         const json = await res.json()
         setData(json)
       } catch (e) {
