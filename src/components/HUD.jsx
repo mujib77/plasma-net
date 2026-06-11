@@ -1,4 +1,4 @@
-export default function HUD({ issData, solarWind }) {
+export default function HUD({ issData, solarWind, asteroidsData }) {
   return (
     <div style={{
       position: 'fixed', top: 0, left: 0,
@@ -120,6 +120,37 @@ export default function HUD({ issData, solarWind }) {
         </div>
       </div>
 
+{ asteroidsData && (
+  <div style={{
+    position: 'absolute', bottom: 28,
+    left: '50%', transform: 'translateX(-50%)',
+    textAlign: 'center',
+  }}>
+    <div style={{ fontSize: 9, letterSpacing: 3, color: 'rgba(255,255,255,0.3)' }}>
+      NEAR-EARTH OBJECTS TODAY
+    </div>
+    <div style={{ display: 'flex', gap: 20, marginTop: 6, justifyContent: 'center' }}>
+      <div>
+        <span style={{ fontSize: 18, fontWeight: 700, color: '#ff4444' }}>
+          {asteroidsData.hazardous}
+        </span>
+        <span style={{ fontSize: 9, letterSpacing: 2, color: 'rgba(255,255,255,0.3)', marginLeft: 4 }}>
+          HAZARDOUS
+        </span>
+      </div>
+      <div style={{ color: 'rgba(255,255,255,0.15)' }}>|</div>
+      <div>
+        <span style={{ fontSize: 18, fontWeight: 700, color: '#44ff88' }}>
+          {asteroidsData.safe}
+        </span>
+        <span style={{ fontSize: 9, letterSpacing: 2, color: 'rgba(255,255,255,0.3)', marginLeft: 4 }}>
+          SAFE
+        </span>
+      </div>
+    </div>
+  </div>
+)}
+
 <div style={{
   position: 'absolute', bottom: 28, right: 28,
   textAlign: 'right',
@@ -160,3 +191,4 @@ export default function HUD({ issData, solarWind }) {
     </div>
   )
 }
+
